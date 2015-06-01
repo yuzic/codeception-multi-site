@@ -19,7 +19,7 @@ require "_helper/Config.php";
 5. На каждый раздел сайта необходимо создать новый файл внутри /acceptance/название сайта.
 
 #### Дополнительные фичи:
-1. Запуск всех тестов командочка: codecept run acceptance
+1. Запуск всех тестов командочка: codecept run acceptance или codecept.phar run acceptance
 2. Запуск отдельного теста происходит через команду, указав путь до самого теста:
  codecept run tests/acceptance/allcafe/loginPageCept.php
 3. Запуск тестов для одного сайта, осуществяенться через команду: 
