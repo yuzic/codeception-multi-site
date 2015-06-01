@@ -1,4 +1,4 @@
-# Небольшая настройка для Codeception для тестирования разных сайтов <h1>
+# Небольшая настройка для Codeception для тестирования нескольких сайтов сразу <h1>
 Настройка и установка:
 
 1. Клонируем репозиторий этот репозиторий, и выполняем командочку: wget http://codeception.com/codecept.phar, для linux все просто, если под Windows, то не забывайте страдать =)
@@ -20,7 +20,9 @@ require "_helper/Config.php";
 
 #### Дополнительные фичи:
 1. Запуск всех тестов командочка: codecept run acceptance
-2. Запуск отдельного теста происходит через команду, указав путь до самого теста: codecept run tests/acceptance/allcafe/loginPageCept.php
-3. Запуск тестов для одного сайта, осуществяенться через команду:   codecept run tests/acceptance/allcafe/
+2. Запуск отдельного теста происходит через команду, указав путь до самого теста:
+ codecept run tests/acceptance/allcafe/loginPageCept.php
+3. Запуск тестов для одного сайта, осуществяенться через команду: 
+ codecept run tests/acceptance/allcafe/
 
 
