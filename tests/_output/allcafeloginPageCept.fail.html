@@ -1,0 +1,682 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кафе и рестораны</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/vendor/css/styles.css">
+    <link rel="stylesheet" href="/vendor/js/bower_components/fancybox/source/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto+Condensed&subset=latin,cyrillic">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://assets.allcafe.ru/favicon.png" sizes="64x64">
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter1087174 = new Ya.Metrika({id:1087174,
+                    clickmap:true,
+                    trackLinks:true,
+                    trackHash:true, webvisor:true});
+
+                w.yaCnt = w.yaCounter1087174;
+                w.yaCnt.params({
+                    'Пользователи' : '<? if ( true === isAuthorized() ): ?>зарегистрированные<? else: ?>гости<? endif; ?>',
+                    'Домен' : '<?=HTTP_HOST?>',
+                    'HistoryAPI' : false
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/1087174" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-35704052-19', 'allcafe.ru');
+    ga('send', 'pageview');
+</script>
+<!-- /Google Analytics -->
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NL69RX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NL69RX');
+</script>
+<!-- End Google Tag Manager -->
+<div id="menu-overlay"><!-- --></div>
+<div id="cities-overlay"><!-- --></div>
+<main>
+    <div>
+        <div class="openx-banner" data-zoneid="1180"></div>
+    </div>
+        <div id="header">
+        <div class="content">
+                            <div class="logged-block">
+                    <img src="http://allcafe.ru/s/pic/avatars/40x40/0.jpeg" alt="">
+                    <div class="info">
+                        <a href="http://allcafe.ru/community/feed" class="profile">Мой AllCafe</a>
+                        <span class="name">itcoder</span>
+                        <a href="http://allcafe.ru/community/out" class="exit">выход</a>
+                    </div>
+                    <div class="icons">
+                        <a href="http://allcafe.ru/community/feed#recommend" class="notification">
+                                                    </a>
+                        <a href="http://allcafe.ru/community/feed#group" class="comment">
+                                                    </a>
+                        <a href="http://allcafe.ru/community/users/inbox" class="mail">
+                                                    </a>
+                                            </div>
+                </div>
+                                                                                                                                            <a href="http://spb.allcafe.ru" class="logo"><!-- --></a>
+            <div class="city-selector">
+                <span>Все рестораны и кафе:</span>
+                <a href=""><!-- --></a>
+                <ul>
+                                            <li class="selected" data-title="Выберите свой город" data-subdomain="">Выберите свой город</li>
+                                                                <li  data-title="Санкт-Петербурга" data-subdomain="spb">Санкт-Петербург</li>
+                                            <li  data-title="Москвы" data-subdomain="msk">Москва</li>
+                                            <li  data-title="Астрахани" data-subdomain="astrakhan">Астрахань</li>
+                                            <li  data-title="Белгорода" data-subdomain="bel">Белгород</li>
+                                            <li  data-title="Великого Новгорода" data-subdomain="vnov">Великий Новгород</li>
+                                            <li  data-title="Владивостока" data-subdomain="vlad">Владивосток</li>
+                                            <li  data-title="Воронежа" data-subdomain="vrn">Воронеж</li>
+                                            <li  data-title="Екатеринбурга" data-subdomain="ekburg">Екатеринбург</li>
+                                            <li  data-title="Ижевска" data-subdomain="izhevsk">Ижевск</li>
+                                            <li  data-title="Казани" data-subdomain="kazan">Казань</li>
+                                            <li  data-title="Калининграда" data-subdomain="klgd">Калининград</li>
+                                            <li  data-title="Калуги" data-subdomain="kaluga">Калуга</li>
+                                            <li  data-title="Костромы" data-subdomain="kostroma">Кострома</li>
+                                            <li  data-title="Краснодара" data-subdomain="krasnodar">Краснодар</li>
+                                            <li  data-title="Красноярска" data-subdomain="krasnoyarsk">Красноярск</li>
+                                            <li  data-title="Курска" data-subdomain="ks">Курск</li>
+                                            <li  data-title="Липецка" data-subdomain="lc">Липецк</li>
+                                            <li  data-title="Нальчика" data-subdomain="nalchik">Нальчик</li>
+                                            <li  data-title="Нижнего Новгорода" data-subdomain="nnov">Нижний Новгород</li>
+                                            <li  data-title="Новосибирска" data-subdomain="novosibirsk">Новосибирск</li>
+                                            <li  data-title="Омска" data-subdomain="omsk">Омск</li>
+                                            <li  data-title="Орла" data-subdomain="orl">Орёл</li>
+                                            <li  data-title="Перми" data-subdomain="perm">Пермь</li>
+                                            <li  data-title="Пскова" data-subdomain="pskov">Псков</li>
+                                            <li  data-title="Ростова-на-Дону" data-subdomain="rnd">Ростов-на-Дону</li>
+                                            <li  data-title="Самары" data-subdomain="samara">Самара</li>
+                                            <li  data-title="Сочи" data-subdomain="sochi">Сочи</li>
+                                            <li  data-title="Тамбова" data-subdomain="tmb">Тамбов</li>
+                                            <li  data-title="Томска" data-subdomain="tomsk">Томск</li>
+                                            <li  data-title="Тулаы" data-subdomain="tula">Тула</li>
+                                            <li  data-title="Уфы" data-subdomain="ufa">Уфа</li>
+                                            <li  data-title="Финляндии" data-subdomain="fin">Финляндия</li>
+                                            <li  data-title="Челябинска" data-subdomain="chel">Челябинск</li>
+                                            <li  data-title="Эстонии" data-subdomain="eesti">Эстония</li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="menu">
+        <div class="content">
+            <div class="special">
+                                            </div>
+            <menu>
+                <li><a href="http://spb.allcafe.ru/restaurants" rel="1">Рестораны</a></li>
+                                <li><a href="http://spb.allcafe.ru/news" rel="3">Новости и обзоры</a></li>
+                                            </menu>
+        </div>
+        <div class="submenu" tag="1">
+            <div class="content">
+                <div class="menu-rests-banner"></div>
+                <div class="column">
+                    <ul>
+                        <li><a href="http://spb.allcafe.ru/restaurants">Каталог ресторанов</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/guide">Отзывы о ресторанах</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/posters">Афиша</a></li>
+                                            </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="http://spb.allcafe.ru/rating">Рейтинги ресторанов</a></li>
+                                                                    </ul>
+                </div>
+                <div class="column">
+                    <a href="http://spb.allcafe.ru/restaurants/guest-add" class="orange-button">Добавить ресторан</a>
+                </div>
+            </div>
+        </div>
+                <div class="submenu" tag="3">
+            <div class="content">
+                <div class="column">
+                    <ul>
+                        <li><a href="http://spb.allcafe.ru/news/opennews">Открытия</a></li>
+                                                <li><a href="http://allcafe.ru/news/interview">Интервью</a></li>
+                        <li><a href="http://spb.allcafe.ru/news/excursions">Ресторанные экскурсии</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="http://spb.allcafe.ru/news/total">Все новости</a></li>
+                    </ul>
+                </div>
+                                                                                                                        <div class="column small">
+                        <a href="http://spb.allcafe.ru/news/total/2015/06/01/letnee-menu-v-marsel-eze" class="news-teaser">
+                            <img width="150" height="113" src="http://assets.allcafe.ru/pic/news2/260x194/b65bb5a7f68077906bef5d93c0b6a24e269bcc3b.jpeg" alt="Летнее меню в «Марсельезе»" />
+                            <p>Летнее меню в «Марсельезе»</p>
+                        </a>
+                    </div>
+                                                                                                                        <div class="column small">
+                        <a href="http://spb.allcafe.ru/news/total/2015/06/01/restoran-cheerduck-k-letu-gotov" class="news-teaser">
+                            <img width="150" height="113" src="http://assets.allcafe.ru/pic/news2/260x194/330e6c44791246b8d0a966355abe89dbaddfb19a.jpeg" alt="Ресторан «CheerDuck» к лету готов!" />
+                            <p>Ресторан «CheerDuck» к лету готов!</p>
+                        </a>
+                    </div>
+                                                                                                                        <div class="column small">
+                        <a href="http://spb.allcafe.ru/news/total/2015/05/29/peruanskaya-kuhnya-v-grand-otele-evropa" class="news-teaser">
+                            <img width="150" height="113" src="http://assets.allcafe.ru/pic/news2/260x194/8f6e1e0ef4d99235835b5854bfcf76b58a8a5d6d.jpeg" alt="Перуанская кухня в Гранд Отеле Европа" />
+                            <p>Перуанская кухня в Гранд Отеле Европа</p>
+                        </a>
+                    </div>
+                            </div>
+        </div>
+    </nav>
+    
+    <section class="separate">
+        <div id="map-main">
+            <div id="map-main">
+                <div class="pull-left">
+                    <p style="">Поиск ресторанов в вашем городе:</p>
+                    <div style="" class="main-cities">
+                        <a href="http://spb.allcafe.ru">Санкт-Петербург</a>
+                        <a href="http://msk.allcafe.ru">Москва</a>
+                    </div>
+                    <div class="big-cities">
+                        <a href="http://vrn.allcafe.ru">Воронеж</a>
+                        <a href="http://ekburg.allcafe.ru">Екатеринбург</a>
+                        <a href="http://kazan.allcafe.ru">Казань</a>
+                        <a href="http://krasnodar.allcafe.ru">Краснодар</a>
+                        <a href="http://nnov.allcafe.ru">Нижний Новгород</a>
+                        <a href="http://rnd.allcafe.ru">Ростов-на-Дону</a>
+                    </div>
+                    <div class="other-cities">
+                        <div class="row">
+                        <a href="http://astrakhan.allcafe.ru">Астрахань</a>
+                        <a href="http://bel.allcafe.ru">Белгород</a>
+                        <a href="http://vnov.allcafe.ru">Великий Новгород</a>
+                        <a href="http://vlad.allcafe.ru">Владивосток</a>
+                        <a href="http://izhevsk.allcafe.ru">Ижевск</a>
+                        <a href="http://kaluga.allcafe.ru">Калуга</a>
+                        <a href="http://kostroma.allcafe.ru">Кострома</a>
+                        <a href="http://krasnoyarsk.allcafe.ru">Красноярск</a>
+
+                        <a href="http://ks.allcafe.ru">Курск</a>
+                        <a href="http://lc.allcafe.ru">Липецк</a>
+                        <a href="http://nalchik.allcafe.ru">Нальчик</a>
+                        <a href="http://novosibirsk.allcafe.ru">Новосибирск</a>
+                        <a href="http://omsk.allcafe.ru">Омск</a>
+                        <a href="http://orl.allcafe.ru">Орёл</a>
+                        <a href="http://perm.allcafe.ru">Пермь</a>
+                        <a href="http://pskov.allcafe.ru">Псков</a>
+                        <a href="http://samara.allcafe.ru">Самара</a>
+                        <a href="http://sochi.allcafe.ru">Сочи</a>
+
+                        <a href="http://tmb.allcafe.ru">Тамбов</a>
+                        <a href="http://tomsk.allcafe.ru">Томск</a>
+                        <a href="http://tula.allcafe.ru">Тула</a>
+                        <a href="http://ufa.allcafe.ru">Уфа</a>
+                        <a href="http://chel.allcafe.ru">Челябинск</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="info">
+                        <img src="/vendor/img/main/allcafe_flat.png">
+                        <p id="allcafe">allcafe</p>
+                        <p>Все рестораны и
+                            кафе в вашем
+                            городе<em>!</em></p>
+                    </div>
+                </div>
+                <div class="other-countries">
+                    <p>Другие страны:</p>
+
+                    <a href="http://fin.allcafe.ru"><img src="/vendor/img/main/Estonia.png"> Эстония</a>
+                    <a href="http://eesti.allcafe.ru"><img src="/vendor/img/main/Finland.png"> Финляндия</a>
+                    <div>
+                        <a target="_blank" href="https://itunes.apple.com/ru/app/allcafe/id470035370?mt=8" id="appStore"></a>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.komandor.allcafe" id="googlePlay"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-banner news-block">
+                <!--/* id14417_cont_content_center */-->
+                <script type='text/javascript'><!--//<![CDATA[
+                    var m3_u = (location.protocol=='https:'?'https://openx.ctlc.ru/www/delivery/ajs.php':'http://openx.ctlc.ru/www/delivery/ajs.php');
+                    var m3_r = Math.floor(Math.random()*99999999999);
+                    if (!document.MAX_used) document.MAX_used = ',';
+                    document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+                    document.write ("?zoneid=1217");
+                    document.write ('&cb=' + m3_r);
+                    if (document.MAX_used != ',') document.write ("&exclude=" + document.MAX_used);
+                    document.write (document.charset ? '&charset='+document.charset : (document.characterSet ? '&charset='+document.characterSet : ''));
+                    document.write ("&loc=" + escape(window.location));
+                    if (document.referrer) document.write ("&referer=" + escape(document.referrer));
+                    if (document.context) document.write ("&context=" + escape(document.context));
+                    if (document.mmm_fo) document.write ("&mmm_fo=1");
+                    document.write ("'><\/scr"+"ipt>");
+                    //]]>--></script><noscript><a href='http://openx.ctlc.ru/www/delivery/ck.php?n=aea50753&cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://openx.ctlc.ru/www/delivery/avw.php?zoneid=1217&cb=INSERT_RANDOM_NUMBER_HERE&n=aea50753' border='0' alt='' /></a></noscript>
+         </div>
+    </section>
+
+    <section>
+        <div class="std-block">
+            <div class="side-banner">
+                <div class="openx-banner" data-zoneid="1201"></div>
+            </div>
+            <h2 class="news"><a href="http://spb.allcafe.ru/news/total">Новости ресторанов
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </a></h2>
+            <div class="short-slider">
+                <div class="slides">
+                                            <div class="slide">
+                            <img src="http://assets.allcafe.ru/pic/news2/260x194/b65bb5a7f68077906bef5d93c0b6a24e269bcc3b.jpeg">
+                            <div class="date">сегодня  13:16</div>
+                            <a href="http://spb.allcafe.ru/news/total/2015/06/01/letnee-menu-v-marsel-eze">Летнее меню в «Марсельезе»</a>
+                            <p><span style="color:#D3D3D3"><em>НПР.</em> </span>Для жаркого летнего дня отлично подойдет гаспаччо из свежих огурцов с тигровыми креветками, сельдереем и кедровыми орехами.</p>
+
+                        </div>
+                                            <div class="slide">
+                            <img src="http://assets.allcafe.ru/pic/news2/260x194/330e6c44791246b8d0a966355abe89dbaddfb19a.jpeg">
+                            <div class="date">сегодня  12:12</div>
+                            <a href="http://spb.allcafe.ru/news/total/2015/06/01/restoran-cheerduck-k-letu-gotov">Ресторан «CheerDuck» к лету готов!</a>
+                            <p><span style="color:#A9A9A9"><em>НПР</em></span>. Ощутить прелесть первых жарких дней можно удобно расположившись на открытой террасе ресторана, а дополнить удовольствие блюдами и напитками из летнего меню.</p>
+
+                        </div>
+                                            <div class="slide">
+                            <img src="http://assets.allcafe.ru/pic/news2/260x194/8f6e1e0ef4d99235835b5854bfcf76b58a8a5d6d.jpeg">
+                            <div class="date">29 мая 2015  12:54</div>
+                            <a href="http://spb.allcafe.ru/news/total/2015/05/29/peruanskaya-kuhnya-v-grand-otele-evropa">Перуанская кухня в Гранд Отеле Европа</a>
+                            <p>Этим летом в меню террасы Гранд Отеля Европа необычные блюда перуанской кухни из отеля Monasterio компании Belmond в Перу</p>
+
+                        </div>
+                                            <div class="slide">
+                            <img src="http://assets.allcafe.ru/pic/news2/260x194/b29d4a8d01553930154f4cecbe2dd75b50da7549.jpeg">
+                            <div class="date">29 мая 2015  11:40</div>
+                            <a href="http://spb.allcafe.ru/news/total/2015/05/29/otkrytiya-craft-brew-cafe">Открытия: «Craft Brew Café»</a>
+                            <p>В рубрике &laquo;Открытия&raquo; читайте материал Анны Коварской о новом проекте холдинга &laquo;ReCa&raquo; &nbsp;- кафе &laquo;Craft Brew&raquo; (Санкт-Петербург, Малая Морская ул., 15).</p>
+
+                        </div>
+                                            <div class="slide">
+                            <img src="http://assets.allcafe.ru/pic/news2/260x194/18996505d1528ce6863e96420692baef853bfb62.jpeg">
+                            <div class="date">29 мая 2015  11:15</div>
+                            <a href="http://spb.allcafe.ru/news/total/2015/05/29/panoramnyj-restoran-letuchij-gollandets-otkryvaet-letnij-sezon">Панорамный ресторан «Летучий Голландец» открывает летний сезон!</a>
+                            <p><span style="color:#D3D3D3"><em>НПР. </em></span>Уютная &laquo;Веранда&raquo; с видом, открывающимся на красоты Петербурга, прохладный ветер, проходящие мимо яхты и лучи солнца, играющие в бокале шампанского...</p>
+
+                        </div>
+                                            <div class="slide">
+                            <img src="http://assets.allcafe.ru/pic/news2/260x194/1139d58b6981dc29f2a5ec721a942fca18d73cce.jpeg">
+                            <div class="date">29 мая 2015  11:10</div>
+                            <a href="http://spb.allcafe.ru/news/total/2015/05/29/aktsiya-v-restorane-praz-d-nik">Акция в ресторане «Праз-д-ник»</a>
+                            <p><span style="color:#A9A9A9"><em>НПР.</em></span><span style="color:#696969"><em> </em></span>С 26 мая по 26 июня месяц подарков от банкетного ресторана &laquo;Праз-д-ник&raquo;.</p>
+
+                        </div>
+                                            <div class="slide">
+                            <img src="http://assets.allcafe.ru/pic/news2/260x194/49434bc9369377d8ccaec96f087694113d821bdd.jpeg">
+                            <div class="date">29 мая 2015  10:50</div>
+                            <a href="http://spb.allcafe.ru/news/total/2015/05/29/weekend-v-arke">Weekend в «Арке»</a>
+                            <p><span style="color:#A9A9A9"><em>НПР. </em></span>В пятницу, 29 мая в новом зале &laquo;Арка Room&raquo; - первая караоке-вечеринка! В субботу, 30 мая, новые сеты в стиле хаус и диско для вас играют Sapon и Redy.</p>
+
+                        </div>
+                                    </div>
+                <a href="" class="prev"><!-- --></a>
+                <a href="" class="next"><!-- --></a>
+            </div>
+            <div class="news-tail">
+                <div class="openx-banner" data-zoneid="1077"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div div class="hbanner ad">
+            <div class="openx-banner" data-zoneid="1078"></div>
+        </div>
+    </section>
+
+            <section>
+            <div class="std-block">
+                <h2 class="rupor"><a href="http://spb.allcafe.ru/news">Статьи, обзоры, интервью</a></h2>
+                                    <ul class="crow">
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/2dfd6a40ef7ac63505985d81f35206023cfe0fff.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/krasnodar-the-pech">Путешествия ресторанного критика. Краснодар, ресторан «The Печь»</a>
+                                <p><table cellspacing="0" cellpadding="0" border="0" align="left" style="width:100%">
+    <tbody>
+        <tr>
+            <td><strong>Рейтинг:</strong> <img style="height:23px; width:23px" alt="" src="/s/pic/Boris/0_Stars.gif"></td>
+            <td style="text-align:right; white-space:nowrap"><em>28 мая 2015 года   </em></td>
+        </tr>
+    </tbody>
+</table>
+<p><br>
+Наполеон из утки (490 руб.) - счастье и радость, достойно любого лучшего ресторана любого города мира. Ведь не просто название, это 100% легчайшая структура идеального Наполеона...</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/6775b9e90b341404a2b0599306afb5b6dfde1aa2.jpeg" class="article-img" alt="">
+                                <div class="kind">Открытие</div>
+                                <a href="http://spb.allcafe.ru/news/opennews/craft-brew-cafe">Открытие: «Craft Brew Café»</a>
+                                <p><p>Дата открытия - май 2015 года<br />
+Адрес: Санкт-Петербург, Малая Морская ул., 15</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/89587224c14358f1f0b1d64e2ed792cbb65916bd.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/par">Колонка ресторанного критика: ресторан «Par»</a>
+                                <p><table align="left" border="0" cellpadding="0" cellspacing="0" style="width:100%">
+	<tbody>
+		<tr>
+			<td><strong>Рейтинг:</strong> <img alt="" src="/s/pic/Boris/0_Stars.gif" style="height:23px; width:23px" /></td>
+			<td style="text-align:right; white-space:nowrap"><em>27 мая 2015 года   </em></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><br />
+Кухня пока проигрывает кальянам 4:2...</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/7a1c041154c81adfc29a5e8c3457082617f2d9cd.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/vmeste">Колонка ресторанного критика: ресторан «Вместе»</a>
+                                <p><table align="left" border="0" cellpadding="0" cellspacing="0" style="width:100%">
+	<tbody>
+		<tr>
+			<td><strong>Рейтинг:</strong> <img alt="" src="/s/pic/Boris/0_Stars.gif" style="height:23px; width:23px" /></td>
+			<td style="text-align:right; white-space:nowrap"><em>26 мая 2015 года   </em></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><br />
+Как идея - здравая и правильная, нужная и в нужном месте. Конечно, человеческий фактор бьёт бесчеловечно. Так что, без &laquo;звёзд&raquo;...</p></p>
+                            </li>
+                                            </ul>
+                                    <ul class="crow">
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/b4416ac23d1297c9907726783d59aad773b7f668.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/lombard">Колонка ресторанного критика: ресторан «Ломбард»</a>
+                                <p><p><strong>Рейтинг: </strong><img alt="" src="/s/pic/Boris/2_Stars.jpg" style="height:23px; width:41px" /><em>                                     25 мая 2015 года</em><br />
+Ярко, интересно, наполнено приключениями, не притянутыми &laquo;а сейчас улыбаемся и пляшем&raquo;. Не аниматор на пляже, а эмоции через еду. Живую. От которой, даже после четырёх перемен, не тяжело.</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/daac881e523052e5e244aaeae3cfd7ddbc447cfa.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/skotina-krasnodar">Путешествия ресторанного критика. Краснодар, ресторан «Скотина»</a>
+                                <p><p ><strong>Рейтинг: </strong><img width="23" height="23" align="absMiddle" alt="" src="/s/pic/Boris/0_Stars.gif"><em>                               21 мая 2015 года</em><br>
+Меню, конечно, достопримечательность. Именно на него я и ехал, именно его распечаточку ласкал до дыр почти полтора года: кто не вожделеет его, тот не поймет. Даже комментировать не буду &ndash; просто смотрите меню и фото на их сайте.</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/66f11dfd8e390e713d1777ad8a2a6c462fc185c2.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/balkan-gurman">Колонка ресторанного критика: ресторан «Балканский гурман»</a>
+                                <p><p ><strong>Рейтинг:</strong> <img align="absmiddle" alt="" src="/s/pic/Boris/1_Stars.jpg"><em>                                  21 мая 2015 года</em><br>
+Хороший повар - свежая, народная, национальная и эмоциональная еда.</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/4d55385992a7b2c2bc7df416d1b86cfa8e8d9ec5.jpeg" class="article-img" alt="">
+                                <div class="kind">Открытие</div>
+                                <a href="http://spb.allcafe.ru/news/opennews/chayka">Открытие: ресторан «Чайка»</a>
+                                <p><p>Дата открытия - май 2015 года<br>
+Адрес: Санкт-Петербург, Крестовский остров, Мартынова наб., напротив д. 40</p></p>
+                            </li>
+                                            </ul>
+                                    <ul class="crow">
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/c13c8640c541b9b3dd27b7440853e38005bcf6f9.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/vuborg">Колонка ресторанного критика: рестораны Выборга</a>
+                                <p><p><em> 19 мая 2015 года</em><br>
+Не был лет пятнадцать, а с гастрономическими интересами, вообще никогда не пытался. Так что, просто зарисовки про шесть мест, три из которых работать не умеют.</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/e950026db647b554761b449bb5ae82267fac16b7.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/bayazet">Колонка ресторанного критика: ресторан «Баязет»</a>
+                                <p><p ><strong>Рейтинг:</strong> <img align="absmiddle" alt="" src="/s/pic/Boris/1_Stars.jpg"><em>                                  18 мая 2015 года</em><br>
+Выше ожиданий. В мае пятнадцатого, даже назову событием. Не переделка, не смена вывески, не пародия на восток.</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/90e863ce2b2d5dac17285388cb121a71d1c5164c.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/ekivoki">Колонка ресторанного критика: кафе «Экивоки»</a>
+                                <p><p ><strong>Рейтинг: </strong><img width="23" height="23" align="absMiddle" src="/s/pic/Boris/0_Stars.gif" alt=""><em>                               15 мая 2015 года</em><br>
+Просто, свежо, молодежно и космополитично.</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/7df47da0081f6de4c212078e834645c7af08a792.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/muusu">Путешествия ресторанного критика. Латвия, Рига, ресторан «Muusu»</a>
+                                <p><p ><strong>Рейтинг:</strong> <img align="absmiddle" src="/s/pic/Boris/1_Stars.jpg" alt=""><em>                                  13 мая 2015 года</em><br>
+Современное место с очень хорошей кухней. Веранда тихой улицы, будет очень смотреться летом. Популярный ресторан, не смог нормально интерьер &laquo;пощелкать&raquo;: люди, люди, люди...</p></p>
+                            </li>
+                                            </ul>
+                                    <ul class="crow">
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/7af91d78317a0151ee7440234967f16a934c4033.jpeg" class="article-img" alt="">
+                                <div class="kind">Открытие</div>
+                                <a href="http://spb.allcafe.ru/news/opennews/rebra-house">Открытие: кафе «Рёбра House» от Сергея Малаховского</a>
+                                <p><p>Дата открытия - 1 мая 2015 года<br>
+Адрес: Санкт-Петербург, Большевиков пр., 8</p></p>
+                            </li>
+                                                    <li>
+                                <img src="http://assets.allcafe.ru/pic/pages/260x194/d78d2a7007e13330ede8a77aaed2168ed7a9f82f.jpeg" class="article-img" alt="">
+                                <div class="kind">Ресторанный критик</div>
+                                <a href="http://spb.allcafe.ru/news/boris/nkr">Колонка ресторанного критика: Новая Русская Кухня. Рассуждения о термине. Рассуждения о примерах</a>
+                                <p><p ><em><strong>                              </strong>                              12 мая 2015 года</em><br>
+Сходил после большого перерыва в &laquo;КоКоКо&raquo;, сходил после чуть меньшего перерыва во &laquo;Вкус есть&raquo;, и решил написать подробнее то, что частично во многих комментариях уже говорил. Ибо появилось&hellip; иллюстрирующее нечто появилось.</p></p>
+                            </li>
+                                            </ul>
+                                    <ul class="crow">
+                                            </ul>
+                                <div class="after-news"><a href="http://spb.allcafe.ru/news" class="more">Показать еще</a></div>
+            </div>
+        </section>
+        <div class="posters_ban">
+        <div class="openx-banner" data-zoneid="1079"></div>
+    </div>
+
+    <section class="text">
+        <p>Allcafe в городах: Москва, Санкт-Петербург, Астрахань, Белгород, Великий Новгород, Владивосток, Воронеж, Екатеринбург, Ижевск, Казань, Калуга, Кострома, Краснодар,  Красноярск, Курск, Липецк, Нижний Новгород, Новосибирск, Омск, Орел, Пермь, Псков, Ростов-на-Дону, Самара, Сочи, Тамбов, Томск, Тула, Уфа, Челябинск.<br>Финляндия, Эстония.</p>
+            </section>
+    <footer>
+        <div class="content">
+            <div class="head"><img src="/vendor/img/main/flogo.png" alt=""></div>
+            <div class="columns">
+                <div class="column w29">
+                    <div class="title">Рестораны</div>
+                    <ul>
+                        <li>
+                            <a href="http://spb.allcafe.ru/restaurants">Все рестораны </a>
+
+                            <ul>
+                                <li><a href="http://spb.allcafe.ru/restaurants/kuhnya-italyanskaya">Итальянские рестораны</a></li>
+                                <li><a href="http://spb.allcafe.ru/restaurants/kuhnya-gruzinskaya">Грузинские рестораны</a></li>
+                                <li><a href="http://spb.allcafe.ru/restaurants/kuhnya-kitayskaya">Китайские рестораны</a></li>
+                                <li><a href="http://spb.allcafe.ru/restaurants/kuhnya-yaponskaya">Японские рестораны</a></li>
+                                <li><a href="http://spb.allcafe.ru/restaurants/kuhnya-russkaya">Рестораны русской кухни</a></li>
+                                <li><a href="http://spb.allcafe.ru/restaurants/kuhnya-armyanskaya">Армянские рестораны</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/guide">Отзывы о ресторанах</a></li>
+                        <li><a href="http://spb.allcafe.ru/rating">Рейтинги ресторанов</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/posters">Афиша мероприятий в ресторанах</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/delivery">Доставка блюд из ресторанов</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/offers">Гастрономические акции</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/discount">Скидки, бонусы, подарки</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants/guest-add">Добавить ресторан</a></li>
+                    </ul>
+
+                </div>
+                <div class="column w30">
+                    <div class="title">Новости и обзоры</div>
+                    <ul>
+                        <li><a href="http://spb.allcafe.ru/news/total">Ресторанные новости</a></li>
+                        <li><a href="http://spb.allcafe.ru/news/opennews">Открытия (статьи о новых ресторанах)</a></li>
+                                                <li><a href="http://allcafe.ru/news/interview">Интервью</a></li>
+                        <li><a href="http://spb.allcafe.ru/news/excursions">Ресторанные экскурсии (обзоры)</a></li>
+                        <li><a href="http://spb.allcafe.ru">Подписаться на новости</a></li>
+                    </ul>
+                    <div class="title">Читальный зал</div>
+                    <ul>
+                        <li><a href="http://allcafe.ru/readingroom/menu">Рецепты от шеф-повара</a></li>
+                        <li><a href="http://allcafe.ru/readingroom/kitchen">Кухни народов мира</a></li>
+                        <li><a href="http://allcafe.ru/readingroom/drink">О напитках</a></li>
+                        <li><a href="http://allcafe.ru/readingroom/history">Ресторанная история</a></li>
+                        <li><a href="http://allcafe.ru/readingroom/oldarticle">Старые подшивки</a></li>
+                        <li><a href="http://allcafe.ru/readingroom/etiquette">Школа этикета</a></li>
+                        <li><a href="http://spb.allcafe.ru/search2/tags">Тэги</a></li>
+                        <li><a href="http://spb.allcafe.ru/search2/persons">Персоналии</a></li>
+                    </ul>
+                </div>
+                <div class="column w33">
+                    <div class="title">AllCafe сообщество</div>
+                    <ul>
+                        <li><a href="http://allcafe.ru/community/in">Зарегистрироваться или авторизоваться</a></li>
+                        <li><a href="http://allcafe.ru/community/in">Войти через аккаунт социальных сетей</a></li>
+                        <li><a href="http://allcafe.ru/community/users">Участники</a></li>
+                        <li><a href="http://allcafe.ru/community/blogs">Блоги</a></li>
+                        <li><a href="http://allcafe.ru/community/forums/horeca-news">Записи в журналах ресторанов</a></li>
+                        <li><a href="http://allcafe.ru/community/forums">Форум</a></li>
+                        <li><a href="http://allcafe.ru/community/feed">“Мой AllCafe”</a></li>
+                    </ul>
+                    <div class="title">AllCafe-профи</div>
+                    <ul>
+                        <li><a href="http://allcafe.ru/profy/suppliers">Каталог поставщиков</a></li>
+                        <li><a href="http://allcafe.ru/profy/board">Доска объявлений</a></li>
+                        <li><a href="http://allcafe.ru/profy/news">Профи-новости</a></li>
+                        <li><a href="http://allcafe.ru/profy/exhibitions">Выставки</a></li>
+                        <li><a href="http://allcafe.ru/profy/contests">Профи-конкурсы</a></li>
+                        <li><a href="http://allcafe.ru/profy/seminars">Расписание семинаров и мастер-классов</a></li>
+                        <li><a href="http://allcafe.ru/profy/business">Бизнес-консультации</a></li>
+                        <li><a href="http://allcafe.ru/profy/job">Биржа труда</a></li>
+                        <li><a href="http://allcafe.ru/community/forums/profi">Профи-форум</a></li>
+                    </ul>
+                </div>
+                <div class="column w23">
+                    <div class="title">AllCafe</div>
+                    <ul>
+                        <li><a href="/about">О проекте</a></li>
+                        <li><a href="http://allcafe.ru/rules">Правила и FAQ</a></li>
+                        <li><a href="http://spb.allcafe.ru/advert">Реклама на сайте</a></li>
+                        <li><a href="http://spb.allcafe.ru/contacts">Контакты</a></li>
+                    </ul>
+                    <span><br><a href="/">AllCafe</a> для iPhone и Android</span>
+                    <div class="downloads">
+                        <a target="_blank" href="https://itunes.apple.com/ru/app/allcafe/id470035370?mt=8"><img src="/vendor/img/main/appstore.png" alt=""></a>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.komandor.allcafe"><img src="/vendor/img/main/gplay.png" alt=""></a>
+                    </div>
+                    <div class="social">
+                        <a target="_blank" href="https://vk.com/allcaferu"><img src="/vendor/img/main/vk.png" alt=""></a>
+                        <a target="_blank" href="https://www.facebook.com/pages/allcaferu/351570254912137"><img src="/vendor/img/main/fb.png" alt=""></a>
+                    </div>
+                    <ul>
+                        <li><a href="http://msk.allcafe.ru/restaurants">Рестораны Москвы</a></li>
+                        <li><a href="http://spb.allcafe.ru/restaurants">Рестораны Санкт-Петербурга</a></li>
+                        <li><a href="http://nnov.allcafe.ru/restaurants">Рестораны Нижнего Новгорода</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tail">© 2002 – 2015 allcafe.ru, свидетельство о регистрации СМИ №2-4571.<br>Перепечатка и использование любых материалов (текстовых и графических элементов), размещенных на портале, допускается с условием размещения ссылки на <a href="http://allcafe.ru">allcafe.ru</a> и с указанием фамилии автора. Сайт использует файлы cookie. Продолжая просмотр сайта, вы соглашаетесь с использованием файлов <a href="http://wp-media.ru/cookie?34772d3a1f15616b8166c21939526ed6">cookie</a>.</div>
+        </div>
+    </footer>
+</main>
+<script src="/vendor/js/config.js"></script>
+<script data-main="app/index" src="/vendor/js/bower_components/requirejs/require.js"></script>
+<!-- Begin comScore Tag -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "18841584" });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=18841584&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<div style="display: none;">
+    <!-- begin of Top100 code -->
+    <script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?3083425"></script>
+    <noscript>
+        <a href="http://top100.rambler.ru/navi/3083425/"><img src="http://counter.rambler.ru/top100.cnt?3083425" alt="Rambler's Top100" border="0" /></a>
+    </noscript>
+    <!-- end of Top100 code -->
+    <!--LiveInternet counter--><script type="text/javascript"><!--
+        new Image().src = "//counter.yadro.ru/hit?r"+
+        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+        ";"+Math.random();//--></script><!--/LiveInternet-->
+
+
+    <!--LiveInternet counter--><script type="text/javascript"><!--
+        document.write("<a href='http://www.liveinternet.ru/click' "+
+        "target=_blank><img src='//counter.yadro.ru/hit?t11.6;r"+
+        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+        ";"+Math.random()+
+        "' alt='' title='LiveInternet: показано число просмотров за 24"+
+        " часа, посетителей за 24 часа и за сегодня' "+
+        "border='0' width='88' height='31'><\/a>")
+        //--></script><!--/LiveInternet-->
+
+    <!-- Rating@Mail.ru counter -->
+    <script type="text/javascript">//<![CDATA[
+        var _tmr = _tmr || [];
+        _tmr.push({id: "2470520",  type: "pageView", start: (new Date()).getTime()});
+        (function (d, w) {
+            var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+            ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+            var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+            if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+        })(document, window);
+        //]]></script><noscript><div style="position:absolute;left:-10000px;">
+            <img src="//top-fwz1.mail.ru/counter?id=2470520;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+        </div></noscript>
+    <!-- //Rating@Mail.ru counter -->
+
+    <!-- Rating@Mail.ru logo -->
+    <a target="_blank" href="http://top.mail.ru/jump?from=2470520">
+        <img src="//top-fwz1.mail.ru/counter?id=2470520;t=479;l=1"
+             border="0" height="31" width="88" alt="Рейтинг@Mail.ru"></a>
+    <!-- //Rating@Mail.ru logo -->
+</div>
+</body>
+</html>
